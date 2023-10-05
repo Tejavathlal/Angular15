@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { CreatestudentComponent } from '../createstudent/createstudent.component';
 import { PopupComponent } from '../popup/popup.component';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StudentdetailsComponent } from '../studentdetails/studentdetails.component';
 
 @Component({
   selector: 'app-studenttable',
@@ -67,8 +68,8 @@ export class StudenttableComponent implements AfterViewInit {
     })
   }
 
-  openpopup(code:any, title:any){
-  var _popup=  this.dailog.open(PopupComponent, {
+  openpopup(code:any, title:any, Component:any){
+  var _popup=  this.dailog.open(Component, {
       width:'50%',
       height:'100vh',
       enterAnimationDuration: '1000ms',
@@ -93,11 +94,15 @@ this.router.navigateByUrl("/dashboard/studentdetails/"+id);
 
   }
   
-  editCustomer(code:any){
-    this.openpopup(code, 'Edit Customer');
+  editCustomer(code:number){
+    this.openpopup(code, 'Edit Customer', PopupComponent);
   }
 
   addcustomer(){
-    this.openpopup(0, 'Add Customer');
+    this.openpopup(0, 'Add Customer', PopupComponent);
   }
+
+  viewdetails(code:any){
+  this.openpopup(0, 'View Details', StudentdetailsComponent);
+  } 
 }

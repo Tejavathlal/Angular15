@@ -140,7 +140,8 @@ export class PopupComponent implements OnInit {
       (data:any)=>{
        this.editdata=data;
        this.studentForm.patchValue({name:this.editdata.name,email:this.editdata.email, mobile:this.editdata.mobile, gender:this.editdata.gender,
-      batch:this.editdata.batch})
+      batch:this.editdata.batch,city:this.editdata.city, mandal:this.editdata.mandal,district:this.editdata.district,state:this.editdata.state
+    })
       }
     )
   }

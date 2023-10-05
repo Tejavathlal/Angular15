@@ -1,1 +1,15 @@
-<p>studentdetails works!</p>
+<h1>Student Details</h1>
+
+<div mat-dialog-content>
+    
+  <h2>Details Name: <b>{{student.name}}</b></h2>
+  <h2>Details Email: <b>{{student.email}}</b></h2>
+  <h2>Details Mobile: <b>{{student.mobile}}</b></h2>
+  <h2>Details Batch: <b>{{student.batch}}</b></h2>
+  <h2>details Gender: <b>{{student.gender}}</b></h2>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="closeDialog()">Close</button>
+</div>

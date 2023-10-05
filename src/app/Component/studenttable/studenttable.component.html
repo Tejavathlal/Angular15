@@ -9,7 +9,7 @@
                 <input matInput [(ngModel)]="term" (keyup)="applyFilter()" placeholder="Search Filter" #input>
             </mat-form-field>
             <div class="add-user-button">
-                <button  mat-raised-button color="primary" (click)="addcustomer()">Add User (+) </button> 
+                <button  mat-raised-button color="primary" (click)="addcustomer()">Add Student (+) </button> 
             </div>
         </div>
     </mat-card-header>
@@ -92,7 +92,9 @@
                         <!-- <button mat-raised-button  color="primary" (click)="edit(student.id)">Edit</button> -->
                         <button mat-raised-button  color="primary" (click)=" editCustomer(student.id)">Edit</button>
 
-                        <button mat-raised-button color="accent" (click)="view(student.id)">View</button>
+                        <!-- <button mat-raised-button color="accent" (click)="view(student.id)">View</button> -->
+                        <button mat-raised-button color="accent" (click)="viewdetails(student.id)">View</button>
+
                         <button mat-raised-button color="warn" (click)="delete(student.id)">Delete</button>
                     </td>
                 </ng-container>
