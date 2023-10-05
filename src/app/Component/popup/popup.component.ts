@@ -26,6 +26,9 @@ export class PopupComponent implements OnInit {
    closemessage= "Close using Directive"
   ngOnInit(): void {
    this.inputdata = this.data;
+   if(this.inputdata.code>0){
+     this.setpopup(this.inputdata.code);
+   }
   }
   
 
@@ -132,5 +135,13 @@ export class PopupComponent implements OnInit {
      this.educationFormCard.removeAt(i);
    }
  
-
+  setpopup(code:any){
+    this.popupService.getstudentview(code).subscribe(
+      (data:any)=>{
+       this.editdata=data;
+       this.studentForm.patchValue({name:this.editdata.name,email:this.editdata.email, mobile:this.editdata.mobile, gender:this.editdata.gender,
+      batch:this.editdata.batch})
+      }
+    )
+  }
 }

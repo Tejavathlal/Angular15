@@ -67,14 +67,15 @@ export class StudenttableComponent implements AfterViewInit {
     })
   }
 
-  openpopup(){
+  openpopup(code:any, title:any){
   var _popup=  this.dailog.open(PopupComponent, {
       width:'50%',
       height:'100vh',
       enterAnimationDuration: '1000ms',
       exitAnimationDuration: '1000ms',
       data:{
-        title: "Using create student Form"
+        title:title,
+        code:code
       }
     });
     _popup.afterClosed().subscribe(term=>{
@@ -92,5 +93,11 @@ this.router.navigateByUrl("/dashboard/studentdetails/"+id);
 
   }
   
-  
+  editCustomer(code:any){
+    this.openpopup(code, 'Edit Customer');
+  }
+
+  addcustomer(){
+    this.openpopup(0, 'Add Customer');
+  }
 }
