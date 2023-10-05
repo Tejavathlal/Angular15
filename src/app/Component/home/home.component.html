@@ -1,0 +1,14 @@
+<h1>Welcome</h1>
+<h2>Angular Material 16</h2>
+
+<button matBadge="TM" matBadgeColor="warn" mat-raised-button color="primary">Welcome</button>
+<br><br>
+<button mat-raised-button matBadge="15"  [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+    Hide
+</button>
+<br><br>
+<button matBadge="TM" matBadgeColor="warn" matBadgeSize="small" matBadgeHidden="false" mat-raised-button color="primary">Welcome</button>
+<br><br>
+<button matBadge="TM" matBadgeColor="warn" matBadgeHidden="false"
+ matBadgeOverlap="false" matBadgePosition="before"
+  matBadgeSize="small" mat-raised-button color="primary">Welcome</button>

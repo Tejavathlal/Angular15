@@ -1,0 +1,17 @@
+<h2>Basic Slider</h2>
+<mat-slider min="20" step="10" max="100" color="warn" discrete="true" showTickMarks="true">
+  <input  matSliderThumb [(ngModel)]="selectedvalue"/>
+</mat-slider>
+<br>
+<label>Selected Slider Value is {{selectedvalue}}</label>
+
+
+<h2>Range Slider</h2>
+<mat-slider min="20" step="10" max="100"  discrete="true" showTickMarks="true">
+  <input   matSliderStartThumb [(ngModel)]="startvalue"/>
+  <input   matSliderEndThumb [(ngModel)]="endvalue"/>
+</mat-slider>
+<br>
+<label>Selected Slider start Value is {{startvalue}}</label>
+<br>
+<label>Selected Slider End Value is {{endvalue}}</label>
